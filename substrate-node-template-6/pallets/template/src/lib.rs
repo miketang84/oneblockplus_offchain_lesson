@@ -17,11 +17,8 @@ mod benchmarking;
 
 use sp_runtime::{
     offchain::{
-        http,
-        storage::{MutateStorageError, StorageRetrievalError, StorageValueRef},
-        Duration,
+        http, Duration,
     },
-    traits::Zero,
 };
 
 use serde::{Deserialize, Deserializer};

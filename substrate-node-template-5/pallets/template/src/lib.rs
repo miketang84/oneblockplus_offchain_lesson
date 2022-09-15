@@ -17,9 +17,7 @@ mod benchmarking;
 
 use sp_runtime::{
     offchain::{
-        http,
         storage::{MutateStorageError, StorageRetrievalError, StorageValueRef},
-        Duration,
     },
     traits::Zero,
 };

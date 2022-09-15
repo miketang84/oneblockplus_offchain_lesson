@@ -15,10 +15,9 @@ mod tests;
 mod benchmarking;
 
 use frame_system::{
-    self as system,
     offchain::{
-        AppCrypto, CreateSignedTransaction, SendSignedTransaction, SendUnsignedTransaction,
-        SignedPayload, Signer, SigningTypes, SubmitTransaction,
+        AppCrypto, CreateSignedTransaction, SendSignedTransaction,
+        Signer,
     },
 };
 use sp_core::crypto::KeyTypeId;
@@ -144,7 +143,7 @@ pub mod pallet {
         #[pallet::weight(0)]
         pub fn submit_data(origin: OriginFor<T>, payload: Vec<u8>) -> DispatchResultWithPostInfo {
 
-            let who = ensure_signed(origin)?;
+            let _who = ensure_signed(origin)?;
 
             log::info!("in submit_data call: {:?}", payload);
 
